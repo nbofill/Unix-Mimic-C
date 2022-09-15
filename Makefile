@@ -1,7 +1,8 @@
 CC = gcc
 CFLAGS = -ansi -pedantic-errors -Wall -fstack-protector-all -Werror
 
-all: public01.x public02.x public03.x public04.x public05.x public06.x public07.x public08.x public09.x public10.x public11.x public12.x public13.x public14.x public15.x 
+all: public01.x public02.x public03.x public04.x public05.x public06.x public07.x \
+public08.x public09.x public10.x public11.x public12.x public13.x public14.x public15.x 
 
 public01.x: ournix.o public01.o
 	$(CC) ournix.o public01.o -o public01.x
@@ -97,6 +98,7 @@ public15.o: public15.c ournix.h memory-checking.h
 	$(CC) $(CFLAGS) -c public15.c
 
 clean: 
-	- rm *.x ournix.o public01.o public02.o public03.o public04.o public05.o public06.o public07.o public08.o public09.o public10.o public11.o public12.o public13.o public14.o public15.o 
+	- rm *.x ournix.o public01.o public02.o public03.o public04.o public05.o public06.o \
+	public07.o public08.o public09.o public10.o public11.o public12.o public13.o public14.o public15.o 
 
 
